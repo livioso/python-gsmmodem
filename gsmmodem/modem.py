@@ -1264,7 +1264,7 @@ class GsmModem(SerialComms):
         else:
             callType = None
         if self._callingLineIdentification and len(lines) > 0:
-            clipLine = lines.pop(0)
+            clipLine = lines.pop(1)
             clipMatch = self.CLIP_REGEX.match(clipLine)
             if clipMatch:
                 callerNumber = '+' + clipMatch.group(1)
